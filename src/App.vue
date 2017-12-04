@@ -1,6 +1,14 @@
 <template>
   <div id="app">
-    <router-view/>
+    <el-container>
+      <el-header>Header</el-header>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main>
+          <router-view/>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
@@ -41,4 +49,10 @@ nav,
 section {
   display: block;
 }
+
+#app > .el-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 </style>
